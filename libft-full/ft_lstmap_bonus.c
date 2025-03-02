@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/01 17:02:59 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/01 21:23:00 by calguaci         ###   ########.fr       */
+/*   Created: 2025/02/16 21:38:01 by calguaci          #+#    #+#             */
+/*   Updated: 2025/02/16 21:38:03 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "./libft.h"
 
-# include "./libft-full/libft.h"
-# include <unistd.h>
-# include <stdlib.h>
-
-typedef struct s_stack
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int data;
-	struct s_stack *previous;
-	struct s_stack *next;
-} t_stack;
+	t_list	*newh;
+	t_list	*new;
 
-typedef struct s_vars
-{
-	int prueba;
-} t_vars;
-
-
-
-
-#endif
+	if (!lst || !f || !del)
+		return (NULL);
+	newh = NULL;
+	while (lst)
+	{
+		new = ft_lstnew(f(lst->content));
+		if (new == NULL)
+		{
+			ft_lstclear(&newh, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&newh, new);
+		lst = lst->next;
+	}
+	return (newh);
+}
