@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 18:01:19 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/03 17:30:53 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/03/07 19:35:11 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		// parseo para cada argv[x]
+		//parse_unlimited(int argc, char **argv)
 	}
 	
 }
