@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:05:55 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/20 19:41:07 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/03/20 20:11:51 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <math.h>
 # include <fcntl.h>
-# include "libft-full/libft.h"
+# include "./libft-full/libft.h"
 
 typedef struct s_stack
 {

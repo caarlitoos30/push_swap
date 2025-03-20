@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:11:32 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/20 19:19:41 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/03/20 20:11:16 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_rotate(t_stack **list, char flag)
 	if (!list || !*list || ft_size_list(*list) < 2)
 		return ;
 	first = (*list);
-	last = ft_lst_last(*list);
+	last = ft_lstlast_bonus(*list);
 	*list = (*list)->next;
 	last->next = first;
 	first->next = NULL;
