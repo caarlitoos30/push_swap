@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   correct_stack.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/20 19:05:47 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/20 19:25:10 by calguaci         ###   ########.fr       */
+/*   Created: 2025/03/20 19:29:21 by calguaci          #+#    #+#             */
+/*   Updated: 2025/03/20 19:29:50 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+int	ft_check_string(const char *str)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
-	char	**words;
-	int		*number;
+	long	result;
 
-	stack_a = NULL;
-	stack_b = NULL;
-	number = process_argv(argc, argv, &stack_a, words);
-	if (argc == 1)
-		exit(1);
-	//AlGORITMO IN PROCESS
+	ft_is_numeric(str);
+	if (ft_strlen(str) > 11)
+		ft_msm_error("Error", 1);
+	result = ft_atoi_check(str);
+	return (result);
 }

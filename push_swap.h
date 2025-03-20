@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:05:55 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/20 19:20:18 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/03/20 19:30:48 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,15 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
-
+//moves.c
 void	ft_swap(t_stack **list, char flag);
 void	ft_rotate(t_stack **list, char flag);
 void	ft_rr(t_stack **stack_a, t_stack **stack_b);
 void	ft_rotate_reverse(t_stack **list, char flag);
 void	ft_push(t_stack **a, t_stack **b, char flag);
-
+//start_stack.c
+int	calc_nelements(int argc, char **argv);
+int	*parse(int argc, char **argv, t_stack **stack_a, char **words);
 
 
 #endif
