@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:29:21 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/20 19:41:55 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/03/25 23:52:53 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,23 @@ void	ft_check_range(long number)
 {
 	if (number < -2147483648 || number > 2147483647)
 		error_message("Error", 1);
+}
+
+void	ft_check_equal(t_stack *head)
+{
+	t_stack	*i;
+	t_stack	*j;
+
+	i = head;
+	while (i != NULL)
+	{
+		j = i->next;
+		while (j != NULL)
+		{
+			if (i->content == j->content)
+				error_message("Error", 1);
+			j = j->next;
+		}
+		i = i->next;
+	}
 }

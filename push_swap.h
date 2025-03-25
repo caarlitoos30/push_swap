@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:05:55 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/20 20:11:51 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/03/26 00:18:43 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,20 @@ void	ft_numeric(const char *str);
 //aux.c
 void	error_message(char *str, int flag);
 int		ft_atoi_check(const char *str);
+void	ft_free_argv(char **mat);
+void	ft_sort_index(t_stack *head);
+int		ft_sqrt(int number);
 //correc_stack.c
+int		ft_check_string(const char *str);
+void	ft_check_range(long number);
+//push_swap.c
+void	ft_is_ordened(t_stack *head);
+//ksort.c
+void	ft_sort(t_stack **stack_a, t_stack **stack_b);
+
+//sort_specific.c
+void	ft_sort_three(t_stack **stack);
+void	ft_sort_four(t_stack **stack_a, t_stack **stack_b);
 
 
 

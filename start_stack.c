@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:26:15 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/20 19:43:46 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/03/25 23:42:01 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,20 @@ int	calc_nelements(int argc, char **argv)
 	while (i < argc)
 		total_words += ft_count_arg(argv[i++], ' ');
 	return (total_words);
+}
+size_t	ft_count_arg(char const *s, char c)
+{
+	size_t	count;
+
+	count = 0;
+	ft_check_empty(s);
+	while (*s != '\0')
+	{
+		if (*s != (char)c && (*(s + 1) == (char)c || *(s + 1) == '\0'))
+			count++;
+		s++;
+	}
+	return (count);
 }
 
 void	ft_numeric(const char *str)

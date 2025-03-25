@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:36:08 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/20 19:41:31 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/03/26 00:18:25 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,50 @@ int	ft_atoi_check(const char *str)
 	}
 	result = result * sign;
 	ft_check_range(result);
+	return (result);
+}
+
+void	ft_free_argv(char **mat)
+{
+	size_t	i;
+
+	i = 0;
+	while (mat[i])
+		free(mat[i++]);
+	free(mat);
+}
+
+void	ft_sort_index(t_stack *head)
+{
+	t_stack	*i;
+	t_stack	*j;
+	int		index;
+
+	index = 0;
+	i = head;
+	while (i != NULL)
+	{
+		j = i->next;
+		while (j != NULL)
+		{
+			if (i->content > j->content)
+				i->index += 1;
+			else if (i->content < j->content)
+				j->index += 1;
+			j = j->next;
+		}
+		i = i->next;
+	}
+}
+
+int	ft_sqrt(int number)
+{
+	int	result;
+
+	if (number == 0)
+		return (0);
+	result = 1;
+	while (result * result < number)
+		result++;
 	return (result);
 }
