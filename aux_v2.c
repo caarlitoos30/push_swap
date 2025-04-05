@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 21:45:46 by calguaci          #+#    #+#             */
-/*   Updated: 2025/04/05 17:01:55 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/05 21:10:55 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_check_equals(t_stack *head)
 		while (j != NULL)
 		{
 			if (i->content == j->content)
-				error_message("Error", 1);
+				error_message("Error", 2);
 			j = j->next;
 		}
 		i = i->next;
@@ -83,22 +83,4 @@ t_stack	*ft_lst_last(t_stack *lst)
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);
-}
-
-void ft_push2(t_stack **before, int content, int pos)
-{
-	t_stack *new;
-
-	if (!before)
-		return;
-
-	new = (t_stack *)malloc(sizeof(t_stack));
-	if (!new)
-		return;
-	
-	new->content = content;
-	new->index = 0;
-	new->pos_init = pos;
-	new->next = *before;
-	*before = new;
 }

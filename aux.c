@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:36:08 by calguaci          #+#    #+#             */
-/*   Updated: 2025/04/05 12:10:15 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/05 21:07:44 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	error_message(char *str, int flag)
 {
 	while (*str != '\0')
 	{
-		write (1, str++, 1);
+		write (flag, str++, 1);
 	}
-	write(1, "\n", 1);
+	write(flag, "\n", 1);
 	exit(flag);
 }
 

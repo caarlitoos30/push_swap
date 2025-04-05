@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:26:15 by calguaci          #+#    #+#             */
-/*   Updated: 2025/04/05 17:02:17 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/05 21:01:54 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,11 @@ void	ft_numeric(const char *str)
 	if (*str == '-' || *str == '+')
 		str++;
 	if (*str < 48 || *str > 57)
-		error_message("Error", 1);
+		error_message("Error", 2);
 	while (*str != '\0')
 	{
 		if (*str < 48 || *str > 57)
-			error_message("Error", 1);
+			error_message("Error", 2);
 		str++;
 	}
 }
@@ -87,5 +87,5 @@ void	ft_check_empty(char const *s)
 			return ;
 		s++;
 	}
-	error_message("Error", 1);
+	error_message("Error", 2);
 }

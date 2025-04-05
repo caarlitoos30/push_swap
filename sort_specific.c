@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 00:04:27 by calguaci          #+#    #+#             */
-/*   Updated: 2025/04/05 16:49:02 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/05 21:09:03 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void	ft_sort_four(t_stack **stack_a, t_stack **stack_b)
 
 void	ft_sort_five(t_stack **stack_a, t_stack **stack_b)
 {
-
 	int			num_move_other_stack;
 
 	num_move_other_stack = 0;

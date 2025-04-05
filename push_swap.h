@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:05:55 by calguaci          #+#    #+#             */
-/*   Updated: 2025/04/05 17:03:38 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/05 21:09:32 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ int		count_r(t_stack *stack, int index);
 void	ft_clean_lst(t_stack **lst);
 int		ft_size_list(t_stack *head);
 t_stack	*ft_lst_last(t_stack *lst);
-void 	ft_push2(t_stack **before, int content, int pos);
-
+void	ft_push2(t_stack **before, int content, int pos);
 
 #endif
