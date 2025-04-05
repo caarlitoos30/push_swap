@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:26:15 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/25 23:42:01 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/04 21:12:30 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,15 @@ void	ft_numeric(const char *str)
 			error_message("Error", 1);
 		str++;
 	}
+}
+
+void	ft_check_empty(char const *s)
+{
+	while (*s != '\0')
+	{
+		if (*s != ' ')
+			return ;
+		s++;
+	}
+	error_message("Error", 1);
 }

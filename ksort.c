@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 23:57:01 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/26 00:21:24 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/03/26 17:19:33 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,5 @@ void	ksort_part_two(t_stack **stack_a, t_stack **stack_b, int length)
 {
 	int	rb_count;
 	int	rrb_count;
-
 }
-
-
 

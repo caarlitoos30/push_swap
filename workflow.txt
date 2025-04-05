@@ -1,0 +1,35 @@
+///// Flujo del programa y funciones /////
+
+ // Push_swap.c
+	|
+	|--- main(int argc, char **argv)
+	|     |--- parse(argc, argv, &stack_a, _words)
+	|	    |	|--- calc_nelements(argc, argv)
+	|		|			|--- ft_count_arg(argv[i++], ' ')
+	|		|					|--- ft_check_empty(s)
+	|		|							|--- error_message("Error, 1)
+	|		|
+	|		|
+	|		|--- ft_split(argv[i++], ' '); //Libft
+	|		|--- ft_check_string(words[k++]);
+	|		|		|--- ft_numeric(str);
+	|		|		|		|--- error_message("Error", 1)
+	|		|		|
+	|		|		|--- ft_strlen //libft
+	|		|		|--- error_message("Error", 1);
+	|		|		|--- ft_atoi_check(str);
+	|		|				|--- error_message ("Error", 1);
+	|		|				|--- ft_check_range (result)
+	|		|						|--- error_message ("Error", 1);
+	|		|
+	|		|--- ft_free_argv(words)
+	|		|--- ft_push(t_stack **a, t_stack **b, char flag)
+	|
+	|--- ft_is_ordened(stack_a)
+	|		|--- ft_lstsize(head);
+	|--- ft_check_equals(stack_a);
+	|
+	|
+	|
+	|
+	|

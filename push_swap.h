@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:05:55 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/26 00:18:43 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/05 10:58:47 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ void	ft_sort(t_stack **stack_a, t_stack **stack_b);
 void	ft_sort_three(t_stack **stack);
 void	ft_sort_four(t_stack **stack_a, t_stack **stack_b);
 
+//aux_v2.c
+int		ft_check_equals(t_stack *head);
 
 
 

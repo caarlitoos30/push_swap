@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:05:47 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/25 23:34:57 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/05 10:46:47 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ int	main(int argc, char **argv)
 	number = parse(argc, argv, &stack_a, words);
 	if (argc == 1)
 		exit(1);
-	//AlGORITMO IN PROCESS
 	ft_is_ordened(stack_a);
 	ft_check_equals(stack_a);
 }
