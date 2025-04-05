@@ -6,17 +6,17 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 23:57:01 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/26 17:19:33 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/05 16:22:10 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sort(t_stack **stack_a, t_stack **stack_b)
+void	ft_sort_lobby(t_stack **stack_a, t_stack **stack_b)
 {
 	int	size_list;
 
-	size_list = ft_lstsize(*stack_a);
+	size_list = ft_size_list(*stack_a);
 	if (size_list == 2)
 		ft_swap(stack_a, 'a');
 	else if (size_list == 3)
@@ -28,7 +28,7 @@ void	ft_sort(t_stack **stack_a, t_stack **stack_b)
 	else if (size_list > 5)
 	{
 		ksort_part_one(stack_a, stack_b, size_list);
-		//ksort_part_two(stack_a, stack_b, size_list); Tengo que dividirlo para que me den las líneas
+		ksort_part_two(stack_a, stack_b, size_list);
 	}
 }
 
@@ -64,5 +64,24 @@ void	ksort_part_two(t_stack **stack_a, t_stack **stack_b, int length)
 {
 	int	rb_count;
 	int	rrb_count;
-}
 
+	while (length - 1 >= 0)
+	{
+		rb_count = count_r(*stack_b, length - 1);
+		rrb_count = (length + 3) - rb_count;
+		if (rb_count <= rrb_count)
+		{
+			while ((*stack_b)->index != length - 1)
+				ft_rotate(stack_b, 'b');
+			ft_push(stack_b, stack_a, 'a');
+			length--;
+		}
+		else
+		{
+			while ((*stack_b)->index != length - 1)
+				ft_rotate_reverse(stack_b, 'b');
+			ft_push(stack_b, stack_a, 'a');
+			length--;
+		}
+	}
+}

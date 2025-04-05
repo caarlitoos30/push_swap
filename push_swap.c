@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:05:47 by calguaci          #+#    #+#             */
-/*   Updated: 2025/04/05 10:46:47 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/05 16:44:30 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_is_ordened(t_stack *head)
 	int		size_list;
 	int		count_comparative;
 
-	size_list = ft_lstsize(head);
+	size_list = ft_size_list(head);
 	if (size_list == 0)
 		return ;
 	i = head;
@@ -48,9 +48,15 @@ int	main(int argc, char **argv)
 
 	stack_a = NULL;
 	stack_b = NULL;
+	words = NULL;
 	number = parse(argc, argv, &stack_a, words);
 	if (argc == 1)
 		exit(1);
 	ft_is_ordened(stack_a);
 	ft_check_equals(stack_a);
+	ft_sort_index(stack_a);
+	ft_sort_lobby(&stack_a, &stack_b);
+	ft_clean_lst(&stack_a);
+	ft_clean_lst(&stack_b);
+	free(number);
 }

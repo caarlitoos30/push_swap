@@ -27,9 +27,28 @@
 	|
 	|--- ft_is_ordened(stack_a)
 	|		|--- ft_lstsize(head);
+	|
 	|--- ft_check_equals(stack_a);
+	|		|--- error_message("Error", 1);
 	|
+	|--- ft_sort_index(stack_a);
 	|
+	|--- ft_sort_lobby(&stack_a, &stack_b)
+	|		|--- ft_lstsize(*stack_a); //libft
+	|		|--- ft_swap(stack_a, 'a');
+	|		|
+	|		|--- (elige entre sort(three)(four)(five) o ksort)
+	|		|
+	|		|--- ksort_part_one(t_stack **stack_a, t_stack **stack_b, int length)
+	|		|		|---ft_sqrt(length);
+	|		|		|--- ft_push(stack_a, stack_b, 'b')
+	|		|
+	|		|--- ksort_part_two(t_stack **stack_a, t_stack **stack_b, int length)
+	|				|--- count_r(*stack_b, length - 1)
+	|				|--- ops
 	|
+	|--- ft_clean_lst(&stack_a)
+	|--- ft_clean_lst(&stack_b)
+	|--- free(number);
 	|
-	|
+	|-----------------------------------------------------END-----------------------------------------------------|

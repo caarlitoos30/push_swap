@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:26:15 by calguaci          #+#    #+#             */
-/*   Updated: 2025/04/04 21:12:30 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/05 17:02:17 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	*parse(int argc, char **argv, t_stack **stack_a, char **words)
 		ft_free_argv(words);
 	}
 	while (j-- > 0)
-		ft_push(stack_a, number[j], j);
+		ft_push2(stack_a, number[j], j);
 	return (number);
 }
 
@@ -49,6 +49,7 @@ int	calc_nelements(int argc, char **argv)
 		total_words += ft_count_arg(argv[i++], ' ');
 	return (total_words);
 }
+
 size_t	ft_count_arg(char const *s, char c)
 {
 	size_t	count;

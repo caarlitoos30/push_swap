@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:11:32 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/25 19:41:39 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/05 16:37:39 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ void	ft_rotate(t_stack **list, char flag)
 	t_stack		*last;
 	t_stack		*first;
 
-	if (!list || !*list || ft_lstsize(*list) < 2)
+	if (!list || !*list || ft_size_list(*list) < 2)
 		return ;
 	first = (*list);
-	last = ft_lstlast(*list);
+	last = ft_lst_last(*list);
 	*list = (*list)->next;
 	last->next = first;
 	first->next = NULL;
@@ -62,7 +62,7 @@ void	ft_rotate_reverse(t_stack **list, char flag)
 	if (!list || !(*list)->next)
 		return ;
 	first = (*list);
-	last = ft_lstlast(*list);
+	last = ft_lst_last(*list);
 	aux = *list;
 	while (aux->next->next)
 		aux = aux->next;
@@ -78,10 +78,6 @@ void	ft_rotate_reverse(t_stack **list, char flag)
 void	ft_push(t_stack **a, t_stack **b, char flag)
 {
 	t_stack	*aux;
-	t_stack	*new;
-	int		content;
-	int		index;
-	int		pos;
 
 	if ((*a))
 	{

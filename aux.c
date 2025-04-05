@@ -6,7 +6,7 @@
 /*   By: calguaci <calguaci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 19:36:08 by calguaci          #+#    #+#             */
-/*   Updated: 2025/03/26 00:18:25 by calguaci         ###   ########.fr       */
+/*   Updated: 2025/04/05 12:10:15 by calguaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,7 @@ void	ft_sort_index(t_stack *head)
 {
 	t_stack	*i;
 	t_stack	*j;
-	int		index;
 
-	index = 0;
 	i = head;
 	while (i != NULL)
 	{
